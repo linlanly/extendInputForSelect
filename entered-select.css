@@ -1,0 +1,158 @@
+.entered-select-box {
+    border: 1px solid #dfdfdf;
+    display: block;
+    height: auto;
+    border-radius: 2px;
+    position: relative;
+    word-wrap: break-word;
+  }
+  .entered-select-box.is-foucs {
+    border: 1px solid #9299a1;
+  }
+  .entered-select-box:hover {
+    cursor: pointer;
+  }
+  .entered-select-box > div {
+    display: inline-block;
+    line-height: 24px;
+    border-radius: 2px;
+    background-color: #eeecec;
+    padding-left: 4px;
+    padding-right: 20px;
+    margin: 4px 0;
+    margin-left: 8px;
+    position: relative;
+  }
+  .entered-select-box > div > i {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+    padding-left: 0;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: #9299a1;
+    color: white;
+    border-radius: 50%;
+  }
+  .entered-select-box .entered-select-value {
+    height: 100%;
+    line-height: 32px;
+    padding-right: 0;
+    background-color: white;
+  }
+  .entered-select-box .entered-select-value:focus {
+    border: none;
+    outline: 0;
+    -webkit-box-shadow: 0;
+    box-shadow: 0;
+  }
+  .entered-select-box .entered-select-value > div {
+    display: inline-block;
+    line-height: 24px;
+    border-radius: 2px;
+    background-color: #eeecec;
+    padding-left: 5px;
+    padding-right: 25px;
+    margin-right: 10px;
+    position: relative;
+  }
+  .entered-select-box .entered-select-list {
+    position: absolute;
+    top: calc(100% + 5px);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: 1px solid #9299a1;
+    border-radius: 2px;
+    background-color: white;
+    transition: height 0.5s;
+    overflow: auto;
+  }
+  .entered-select-box .entered-select-list li {
+    line-height: 33.5px;
+    padding-left: 10px;
+    padding-right: 20px;
+    color: #494949;
+    position: relative;
+    overflow: hidden;
+  
+    text-overflow: ellipsis;
+  
+    white-space: nowrap;
+  }
+  .entered-select-box .entered-select-list li i {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: inline;
+    line-height: 33.5px;
+    -moz-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+    /*兼容IE*/
+    filter: FlipV;
+    display: none;
+  }
+  .entered-select-box .entered-select-list li i::after {
+    content: "7";
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-55deg);
+    -o-transform: rotate(-45deg);
+  }
+  .entered-select-box .entered-select-list li:hover,
+  .entered-select-box .entered-select-list li.is-selected {
+    background-color: #f3f3f3;
+  }
+  .entered-select-box .entered-select-list .filter-empty {
+    margin: 4px 10px;
+    color: #9299A1;
+  }
+  .entered-select-box .entered-select-icon {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #3c87e0;
+  }
+  .entered-select-box .entered-select-icon::after {
+    content: "﹀";
+    display: inline-block;
+    width: 14px;
+    height: 7px;
+    font-size: 12px;
+     
+    transform: scaleY(1.5);
+    -ms-transform: scaleY(1.5);
+    -moz-transform: scaleY(1.5);
+    -webkit-transform: scaleY(1.5);
+    -o-transform: scaleY(1.5);
+  }
+  .entered-select-box.is-error {
+    animation-name: errorWarning;
+    animation-duration: 0.5s;
+  }
+  @keyframes errorWarning {
+    0% {
+      border: 1px solid #9299a1;
+    }
+    20% {
+      border: 1px solid red;
+    }
+    80% {
+      border: 1px solid red;
+    }
+    100% {
+      border: 1px solid #9299a1;
+    }
+  }
