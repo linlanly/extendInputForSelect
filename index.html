@@ -12,17 +12,16 @@
     书籍：<div id="box"></div>
     <script>
         window.onload = function () {
-            new EnteredSelect(
-                "box",
+            var enteredSelect = new EnteredSelect();
+            enteredSelect.constructor("box",
                 [
                     { value: "1", label: "javascript开发指南" },
                     { value: "2", label: "node.js入门" },
                     { value: "3", label: "css神秘花园" },
-                    { value: "4", label: "java虚拟机" },
                     { value: "5", label: "javascript你不能不知道的事" },
+                    { value: "4", label: "java虚拟机" },
                 ],
-                { multiple: true, isSelect: true, minimum: 4, maximum: 3 }
-            );
+                { multiple: true, isSelect: true, minimum: 4, maximum: 3 })
         }
     </script>
 </body>

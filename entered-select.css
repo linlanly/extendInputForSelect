@@ -1,10 +1,11 @@
 .entered-select-box {
     border: 1px solid #dfdfdf;
-    display: block;
+    display: flex;
     height: auto;
     border-radius: 2px;
     position: relative;
     word-wrap: break-word;
+    transform: color 0.5s;
   }
   .entered-select-box.is-foucs {
     border: 1px solid #9299a1;
@@ -36,6 +37,7 @@
     background-color: #9299a1;
     color: white;
     border-radius: 50%;
+    user-select: none;
   }
   .entered-select-box .entered-select-value {
     height: 100%;
@@ -62,6 +64,7 @@
   .entered-select-box .entered-select-list {
     position: absolute;
     top: calc(100% + 5px);
+    left: 0;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -139,20 +142,5 @@
     -o-transform: scaleY(1.5);
   }
   .entered-select-box.is-error {
-    animation-name: errorWarning;
-    animation-duration: 0.5s;
-  }
-  @keyframes errorWarning {
-    0% {
-      border: 1px solid #9299a1;
-    }
-    20% {
-      border: 1px solid red;
-    }
-    80% {
-      border: 1px solid red;
-    }
-    100% {
-      border: 1px solid #9299a1;
-    }
+    border: 1px solid red;
   }
